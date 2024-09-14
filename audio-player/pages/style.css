@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/images/dontstartnow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h3,
+h6,
+div,
+img {
+    padding: 0;
+    margin: 0;
+}
