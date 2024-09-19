@@ -13,6 +13,20 @@ const musicArray = [
     singer: "Dua Lipa",
     song: "Don't start now",
   },
+  {
+    src: "../assets/audio/beyonce.mp3",
+    img: "../assets/images/beyonce.png",
+    background: "../assets/images/beyonce.png",
+    singer: "Beyoncé",
+    song: "Lemonade",
+  },
+  {
+    src: "../assets/audio/dualipa.mp3",
+    img: "../assets/images/dualipa.png",
+    background: "../assets/images/dualipa.png",
+    singer: "Dua Lipa",
+    song: "Don't start now",
+  },
 ];
 
 const playPause = document.querySelector(".play-btn");
