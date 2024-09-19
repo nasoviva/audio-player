@@ -72,7 +72,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #acc3c5;
+  background-color: #f7eee1;
 }
 
 .song-image .photo {
@@ -108,7 +108,12 @@ svg {
 }
 
 button:hover svg {
-  fill: #222a2f;
+  fill: #212b31;
+  transition: 0.5s;
+}
+
+button:active svg {
+  fill: #000;
   transition: 0.5s;
 }
 
@@ -222,19 +227,19 @@ button:hover svg {
 }
 
 .progress::-webkit-slider-thumb:hover {
-  background: #222a2f;
+  background: #212b31;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .progress::-moz-range-thumb:hover {
-  background: #222a2f;
+  background: #212b31;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .progress::-ms-thumb:hover {
-  background: #000;
+  background: #212b31;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -252,7 +257,7 @@ button:hover svg {
 }
 
 .progress::-ms-thumb:active {
-  background: #222a2f;
+  background: #000;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -274,6 +279,10 @@ button:hover svg {
 
 button:hover .footer-img {
   box-shadow: 0 0 0.1rem 0.1rem #ffb749;
+}
+
+button:active .footer-img {
+  box-shadow: 0 0 0.1rem 0.1rem #000;
 }
 
 .footer-year {

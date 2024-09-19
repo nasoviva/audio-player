@@ -127,7 +127,7 @@ function updateProgressTimerBar() {
     ((progressTimer.value - progressTimer.min) /
       (progressTimer.max - progressTimer.min)) *
     100;
-  progressTimer.style.background = `linear-gradient(to right, #ffb749 ${value}%, #ddd ${value}%)`;
+  progressTimer.style.background = `linear-gradient(to right, #b0b0b0 ${value}%, #ddd ${value}%)`;
 }
 
 //Функция обновления прогрессБара звука
@@ -136,7 +136,7 @@ function updateProgressSoundBar() {
     ((progressSound.value - progressSound.min) /
       (progressSound.max - progressSound.min)) *
     100;
-  progressSound.style.background = `linear-gradient(to right, #ffb749 ${value}%, #ddd ${value}%)`;
+  progressSound.style.background = `linear-gradient(to right, #b0b0b0 ${value}%, #ddd ${value}%)`;
 }
 
 //Функция обновления прогрессБара звука при нажатии на кнопки мин и макс звука
