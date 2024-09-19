@@ -23,8 +23,12 @@ button {
   padding: 0;
   margin: 0;
   box-shadow: none;
-  cursor: pointer;
   outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 main {
@@ -103,6 +107,21 @@ svg {
   fill: #2d3f4a;
 }
 
+button:hover svg {
+  fill: #222a2f;
+  transition: 0.5s;
+}
+
+.low.inactive svg,
+.high.inactive svg {
+  opacity: 0.5;
+}
+
+.low.inactive,
+.high.inactive {
+  cursor: default;
+}
+
 .change {
   width: 100%;
   height: 3rem;
@@ -177,7 +196,6 @@ svg {
   width: 1rem;
   height: 1rem;
   background: #2d3f4a;
-  cursor: pointer;
   border-radius: 50%;
   position: relative;
   z-index: 1;
@@ -187,7 +205,6 @@ svg {
   width: 1rem;
   height: 1rem;
   background: #2d3f4a;
-  cursor: pointer;
   border-radius: 50%;
 }
 
@@ -195,7 +212,6 @@ svg {
   width: 1rem;
   height: 1rem;
   background: #2d3f4a;
-  cursor: pointer;
   border-radius: 50%;
 }
 
@@ -203,6 +219,42 @@ svg {
   width: 100%;
   background: transparent;
   border-radius: 0.5rem;
+}
+
+.progress::-webkit-slider-thumb:hover {
+  background: #222a2f;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-moz-range-thumb:hover {
+  background: #222a2f;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-ms-thumb:hover {
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-webkit-slider-thumb:active {
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-moz-range-thumb:active {
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-ms-thumb:active {
+  background: #222a2f;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .footer-rslogo,
@@ -217,6 +269,11 @@ svg {
   border: #ffb749 0.1rem solid;
   border-radius: 50%;
   background-color: #ffb749;
+  transition: box-shadow 0.3s linear;
+}
+
+button:hover .footer-img {
+  box-shadow: 0 0 0.1rem 0.1rem #ffb749;
 }
 
 .footer-year {

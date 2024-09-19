@@ -119,29 +119,40 @@ function updateProgressTimer() {
   progressTimer.value = (audio.currentTime / audio.duration) * 100;
   time.textContent = updateTime(audio.currentTime);
   updateProgressTimerBar();
-  
 }
 
 //Функция обновления прогрессБара прошедшего времени проигрывания
 function updateProgressTimerBar() {
-  const value = ((progressTimer.value - progressTimer.min) / (progressTimer.max - progressTimer.min)) * 100;
+  const value =
+    ((progressTimer.value - progressTimer.min) /
+      (progressTimer.max - progressTimer.min)) *
+    100;
   progressTimer.style.background = `linear-gradient(to right, #ffb749 ${value}%, #ddd ${value}%)`;
 }
 
 //Функция обновления прогрессБара звука
 function updateProgressSoundBar() {
-  const value = ((progressSound.value - progressSound.min) / (progressSound.max - progressSound.min)) * 100;
+  const value =
+    ((progressSound.value - progressSound.min) /
+      (progressSound.max - progressSound.min)) *
+    100;
   progressSound.style.background = `linear-gradient(to right, #ffb749 ${value}%, #ddd ${value}%)`;
 }
 
 //Функция обновления прогрессБара звука при нажатии на кнопки мин и макс звука
 function toggleSoundButton(event) {
   const button = event.target.closest("button");
+
   if (button.classList.contains("low")) {
     progressSound.value = 0;
+    lowButton.classList.add("inactive");
+    highButton.classList.remove("inactive");
   } else if (button.classList.contains("high")) {
     progressSound.value = 100;
+    highButton.classList.add("inactive");
+    lowButton.classList.remove("inactive");
   }
+
   audio.volume = progressSound.value / 100;
   updateProgressSoundBar();
 }
@@ -150,7 +161,7 @@ function toggleSoundButton(event) {
 function updateMetaData() {
   progressTimer.value = 0;
   updateDuration();
-  updateProgressTimerBar(); 
+  updateProgressTimerBar();
   updateProgressSoundBar();
   updateContent();
   if (isPlaying) {
@@ -189,4 +200,14 @@ progressTimer.addEventListener("input", function () {
 progressSound.addEventListener("input", function () {
   audio.volume = progressSound.value / 100;
   updateProgressSoundBar();
+  if (progressSound.value > 0 && progressSound.value < 100) {
+    lowButton.classList.remove("inactive");
+    highButton.classList.remove("inactive");
+  } else if (progressSound.value === 0) {
+    lowButton.classList.add("inactive");
+    highButton.classList.remove("inactive");
+  } else if (progressSound.value === 100) {
+    highButton.classList.add("inactive");
+    lowButton.classList.remove("inactive");
+  }
 });
