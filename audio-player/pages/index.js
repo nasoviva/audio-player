@@ -211,3 +211,6 @@ progressSound.addEventListener("input", function () {
     lowButton.classList.remove("inactive");
   }
 });
+
+// Обработчик для отслеживания окончания трека
+audio.addEventListener("ended", toggleAudioEnd);
