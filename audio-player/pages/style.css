@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #2d3f4a;
+  background-image: url(../assets/images/dontstartnow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h3,
+div,
+img {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 120rem;
+  min-width: 20rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-container,
+.footer-container {
+  width: 20rem;
+  display: flex;
+  margin: 1rem auto;
+}
+
+.player-container {
+  margin: 5rem auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7eee1;
+}
+
+.song-image .photo {
+  width: 20rem;
+  height: 20rem;
+}
+
+.photo {
+  background-image: url(../assets/images/dontstartnow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.sound {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+svg {
+  fill: #2d3f4a;
+}
+
+button:hover svg {
+  fill: #212b31;
+  transition: 0.5s;
+}
+
+button:active svg {
+  fill: #000;
+  transition: 0.5s;
+}
+
+.low.inactive svg,
+.high.inactive svg {
+  opacity: 0.5;
+}
+
+.low.inactive,
+.high.inactive {
+  cursor: default;
+}
+
+.change {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pause {
+  display: none;
+}
+
+.play-img.play {
+  display: block;
+}
+
+.play-btn.playing .play-img.play {
+  display: none;
+}
+
+.play-btn.playing .play-img.pause {
+  display: block;
+}
+
+.description {
+  width: 100%;
+  overflow: hidden;
+}
+
+.singer,
+.song {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.info-slider,
+.sound {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.slider {
+  width: 13rem;
+}
+
+.progress {
+  -webkit-appearance: none;
+  width: 12rem;
+  background: #ddd;
+  border-radius: 0.5rem;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.15s ease-in-out;
+  position: relative;
+}
+
+.progress::-webkit-slider-runnable-track {
+  width: 100%;
+  background: transparent;
+  border-radius: 0.5rem;
+}
+
+.progress::-moz-range-track {
+  width: 100%;
+  background: transparent;
+  border-radius: 0.5rem;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background: #2d3f4a;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.progress::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  background: #2d3f4a;
+  border-radius: 50%;
+}
+
+.progress::-ms-thumb {
+  width: 1rem;
+  height: 1rem;
+  background: #2d3f4a;
+  border-radius: 50%;
+}
+
+.progress::-ms-track {
+  width: 100%;
+  background: transparent;
+  border-radius: 0.5rem;
+}
+
+.progress::-webkit-slider-thumb:hover {
+  background: #212b31;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-moz-range-thumb:hover {
+  background: #212b31;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-ms-thumb:hover {
+  background: #212b31;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-webkit-slider-thumb:active {
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-moz-range-thumb:active {
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.progress::-ms-thumb:active {
+  background: #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.footer-rslogo,
+.footer-git,
+.footer-year {
+  width: 3rem;
+  height: 3rem;
+}
+
+.footer-img {
+  fill: #000;
+  border: #ffb749 0.1rem solid;
+  border-radius: 50%;
+  background-color: #ffb749;
+  transition: box-shadow 0.3s linear;
+}
+
+button:hover .footer-img {
+  box-shadow: 0 0 0.1rem 0.1rem #ffb749;
+}
+
+button:active .footer-img {
+  box-shadow: 0 0 0.1rem 0.1rem #000;
+}
+
+.footer-year {
+  border-radius: 50%;
+  border: #ffb749 0.1rem solid;
+  background-color: #000;
+  color: #ffb749;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
