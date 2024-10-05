@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><b>Audio Player</b></h1>
+  <h1><a href="https://nasoviva.github.io/audio-player/audio-player/pages/index.html">Audio Player</a></h1>
 </div>
 <br>
 <p align="center">This project allows sequential playback of music tracks or
